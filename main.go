@@ -14,8 +14,15 @@ import (
 
 type todo struct {
 	ID string `json:"id"`
+	UserID    int    `json:"user_id"`
 	Item string `json:"item"`
 	Completed bool `json:"completed"`
+}
+
+type user struct {
+	ID       int    `json:"id"`
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
 var todos = []todo{}
